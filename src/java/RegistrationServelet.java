@@ -31,6 +31,7 @@ public class RegistrationServelet extends HttpServlet {
          stm.setString(3, password);
          stm.executeUpdate();
          con.close();
+         res.sendRedirect("login.html");
      }
      catch(SQLException e){
     res.getWriter().println("Registration failed: " + e.getMessage());
